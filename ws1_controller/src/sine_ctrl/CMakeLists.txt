@@ -12,6 +12,21 @@ find_package(std_msgs REQUIRED)
 find_package(controller_interface REQUIRED)
 find_package(pluginlib REQUIRED)
 
+
+add_library(sine_controller SHARED src/sine_controller.cpp)
+pluginlib_export_plugin_description_file(controller_interface sine_controller.xml)
+
+ament_target_dependencies(sine_controller
+  rclcpp
+  controller_interface
+  pluginlib
+)
+install(
+  TARGETS sine_controller
+  LIBRARY DESTINATION lib
+)
+
+
 if(BUILD_TESTING)
   find_package(ament_lint_auto REQUIRED)
   # the following line skips the linter which checks for copyrights
