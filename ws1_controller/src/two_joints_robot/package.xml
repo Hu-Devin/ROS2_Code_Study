@@ -4,7 +4,7 @@
   <name>two_joints_robot</name>
   <version>0.0.0</version>
   <description>TODO: Package description</description>
-  <maintainer email="haifeng_njau@yeah.net">devin</maintainer>
+  <maintainer email="haifeng_njau@yeah.com">devin</maintainer>
   <license>TODO: License declaration</license>
 
   <buildtool_depend>ament_cmake</buildtool_depend>
